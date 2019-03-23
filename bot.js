@@ -311,7 +311,8 @@ client.on('message', function(msg) {
 }
 });
 
-client.on('message', message =>  
+client.on('message', message => {
+    var prefix = '+'
     if (message.content.startsWith(prefix + "avatar")) {
         var mentionned = message.mentions.users.first();
     var x5bzm;
@@ -327,7 +328,6 @@ client.on('message', message =>
       message.channel.sendEmbed(embed);
     }
 });
-
 
  client.on('message', message => {
               if (!message.channel.guild) return;
